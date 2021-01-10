@@ -7,5 +7,5 @@ En este proyecto se realizará una app movil  para  clientes en donde estos podr
 
 - Integrantes: 	- Gabriel Maurucio Rojas Barrera
 		- Jonatan Enrique Suarez Jimenez
-- Tecnologias: API
+- Tecnologias: API, Flutter
 - Editor: Visual Studio 2019
