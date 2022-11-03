@@ -67,10 +67,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                               delegate: SliverChildBuilderDelegate(
                                   (BuildContext context, int index) {
                                 return Column(
-                                  children: <Widget>[
-                                    
-                                   
-                                  ],
+                                  children: <Widget>[],
                                 );
                               }, childCount: 1),
                             ),
@@ -200,8 +197,6 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
     );
   }
 
- 
-
   Widget getSearchBarUI() {
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
@@ -267,7 +262,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   padding: const EdgeInsets.all(16.0),
                   child: Icon(FontAwesomeIcons.search,
                       size: 20,
-                      color: HotelAppTheme.buildLightTheme().backgroundColor),
+                      color: HotelAppTheme.buildLightTheme().primaryColor),
                 ),
               ),
             ),
@@ -308,10 +303,10 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Veterinarias cerca de ti',
+                      'Popular',
                       style: TextStyle(
-                        fontWeight: FontWeight.w100,
-                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
                       ),
                     ),
                   ),
@@ -326,17 +321,13 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                     borderRadius: const BorderRadius.all(
                       Radius.circular(4.0),
                     ),
-                    
                     child: Padding(
                       padding: const EdgeInsets.only(left: 8),
                       child: Row(
                         children: <Widget>[
-                          
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(Icons.sort,
-                                color: HotelAppTheme.buildLightTheme()
-                                    .primaryColor),
+                            child: Icon(Icons.sort, color: Colors.black),
                           ),
                         ],
                       ),
@@ -358,8 +349,6 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
       ],
     );
   }
-
-  
 
   Widget getAppBarUI() {
     return Container(
@@ -389,37 +378,35 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                   ),
                   onTap: () {
                     Navigator.push(
-                                context, 
-                                MaterialPageRoute(builder: (context)=> TrainingScreen())
-                              );
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TrainingScreen()));
                   },
-                  
                 ),
               ),
             ),
             Expanded(
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 4),
-                child: Text(
-                  '+Veterinarias',
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: HotelAppTheme.buildLightTheme().primaryColor,
-                    fontWeight: FontWeight.w700,
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Text(
+                    'Flyer',
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black54,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ),
             ),
-          ),
-           Container(
+            Container(
               width: AppBar().preferredSize.height + 40,
               height: AppBar().preferredSize.height,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  
                   Material(
                     color: Colors.transparent,
                     child: InkWell(

@@ -31,8 +31,6 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                   height: MediaQuery.of(context).size.height,
                   child: Column(
                     children: <Widget>[
-                      
-                     
                       Flexible(
                         child: getPopularCourseUI(),
                       ),
@@ -271,8 +269,12 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
               children: <Widget>[
                 IconButton(
                   alignment: Alignment.topLeft,
-                  icon: Icon(Icons.arrow_back,color: Colors.black,size: 30.0,),
-                 onPressed: () => Navigator.of(context).pop(), 
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                  onPressed: () => Navigator.of(context).pop(),
                 )
               ],
             ),
@@ -280,7 +282,6 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
           Container(
             width: 60,
             height: 60,
-          
           )
         ],
       ),

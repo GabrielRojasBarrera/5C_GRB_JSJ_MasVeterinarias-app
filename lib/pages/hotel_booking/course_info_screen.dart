@@ -98,7 +98,7 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                             padding: const EdgeInsets.only(
                                 top: 32.0, left: 18, right: 16),
                             child: Text(
-                              'Veterinaria\nSan Miguel',
+                              'Medieval Helmets',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
@@ -108,15 +108,15 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                               ),
                             ),
                           ),
-                          
                           AnimatedOpacity(
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity1,
                             child: Padding(
                               padding: const EdgeInsets.all(8),
                               child: Row(
-                                children: <Widget>[                                  
-                                  getTimeBoxUI('', 'Servicios'),                                  
+                                children: <Widget>[
+                                  getTimeBoxUI2('', '2k'),
+                                  getTimeBoxUI('', '33'),
                                 ],
                               ),
                             ),
@@ -129,7 +129,7 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: Text(
-                                  'En la Clínica Veterinaria contamos con excelentes programas de medicina preventiva como es la aplicación de vacunas para perros, gatos y hurones de los laboratorios más reconocidos y con los distribuidores  del ramo que se han destacado por el mantenimiento de la cadena fría para que los biológicos al ser aplicados a su mascota se encuentren en perfectas condiciones.\nTambién contamos con el chequeo geriátrico el cual recomendamos para perros de talla miniatura a partir de los 9 años de edad.',                                  
+                                  'Concept art digital painting or illustration of warrior king in full plate armor.',
                                   textAlign: TextAlign.justify,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w200,
@@ -147,61 +147,57 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                             duration: const Duration(milliseconds: 500),
                             opacity: opacity3,
                             child: Padding(
-                              
-
-                                padding: const EdgeInsets.only(
-                                    left: 50, bottom: 16, right: 50),
-                                child: InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                    context, 
-                                    MaterialPageRoute(builder: (context)=> MsdaPage())
-                                    );
-                                    
-                                  },    
+                              padding: const EdgeInsets.only(
+                                  left: 50, bottom: 16, right: 50),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => MsdaPage()));
+                                },
                                 child: Row(
-                                
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  
-                                  const SizedBox(
-                                    width: 16,                                  
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      height: 48,                                                                            
-                                      decoration: BoxDecoration(
-                                        color: DesignCourseAppTheme.nearlyBlue,
-                                        borderRadius: const BorderRadius.all(
-                                          Radius.circular(16.0),
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    const SizedBox(
+                                      width: 16,
+                                    ),
+                                    Expanded(
+                                      child: Container(
+                                        height: 48,
+                                        decoration: BoxDecoration(
+                                          color:
+                                              DesignCourseAppTheme.nearlyBlue,
+                                          borderRadius: const BorderRadius.all(
+                                            Radius.circular(16.0),
+                                          ),
+                                          boxShadow: <BoxShadow>[
+                                            BoxShadow(
+                                                color: DesignCourseAppTheme
+                                                    .nearlyBlue
+                                                    .withOpacity(0.5),
+                                                offset: const Offset(1.1, 1.1),
+                                                blurRadius: 10.0),
+                                          ],
                                         ),
-                                        boxShadow: <BoxShadow>[
-                                          BoxShadow(
+                                        child: Center(
+                                          child: Text(
+                                            'Ver perfil',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 18,
+                                              letterSpacing: 0.0,
                                               color: DesignCourseAppTheme
-                                                  .nearlyBlue
-                                                  .withOpacity(0.5),
-                                              offset: const Offset(1.1, 1.1),
-                                              blurRadius: 10.0),
-                                        ],
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          'Agendar una cita',
-                                          textAlign: TextAlign.left,
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 18,
-                                            letterSpacing: 0.0,
-                                            color: DesignCourseAppTheme
-                                                .nearlyWhite,
+                                                  .nearlyWhite,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  )
-                                ],
-                              ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -232,7 +228,7 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
                     height: 60,
                     child: Center(
                       child: Icon(
-                        Icons.medical_services,
+                        Icons.favorite,
                         color: DesignCourseAppTheme.nearlyWhite,
                         size: 30,
                       ),
@@ -287,31 +283,69 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
               left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
           child: InkWell(
             onTap: () {
-                  Navigator.push(
-                   context, 
-                   MaterialPageRoute(builder: (context)=> DesignCourseHomeScreen())
-                  );
-                  
-                },
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[ 
-              Icon(Icons.pets,
-                color: Colors.blue
-              ),            
-              Text(
-                txt2,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                  letterSpacing: 0.27,
-                  color: DesignCourseAppTheme.nearlyBlue,
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => DesignCourseHomeScreen()));
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Icon(Icons.comment, color: Colors.blue),
+                Text(
+                  txt2,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    letterSpacing: 0.27,
+                    color: DesignCourseAppTheme.nearlyBlue,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget getTimeBoxUI2(String text1, String txt2) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        decoration: BoxDecoration(
+          color: DesignCourseAppTheme.nearlyWhite,
+          borderRadius: const BorderRadius.all(Radius.circular(16.0)),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.only(
+              left: 18.0, right: 18.0, top: 12.0, bottom: 12.0),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => DesignCourseHomeScreen()));
+            },
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Icon(Icons.visibility, color: Colors.blue),
+                Text(
+                  txt2,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14,
+                    letterSpacing: 0.27,
+                    color: DesignCourseAppTheme.nearlyBlue,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
